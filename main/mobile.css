@@ -1,0 +1,105 @@
+/* Ссылка в виде покрышки */
+.greeting__link {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 15px auto auto;
+    border: 10px solid var(--base-black);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--tyre-color);
+    transition: transform 0.6s ease;
+    text-decoration: none;
+}
+
+/* Надпись внутри покрышки */
+.greeting__link .text {
+    z-index: 2;
+    color: var(--base-white);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Эффект вращения при наведении */
+.greeting__link:hover {
+    transform: rotate(360deg);
+}
+
+/* Дополнительные декоративные линии внутри покрышки */
+.greeting__link::before {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 5px solid var(--tyre-border);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px var(--tyre-shadow);
+    content: "";
+}
+
+
+/* Destinations Section */
+.destination {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.destination__container {
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.destination__card {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 300px;
+    border-radius: 8px;
+    background-color: var(--card-color);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    text-align: center;
+}
+
+.destination__card img {
+    position: absolute;
+    z-index: 0;
+    top: -20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.destination__card h3 {
+    position: relative;
+    z-index: 2;
+    padding: 5px;
+    margin: 0;
+    background-color: var(--tyre-shadow);
+}
+
+.destination__card p {
+    position: relative;
+    z-index: 2;
+    padding: 5px;
+    margin: 0;
+    background-color: var(--tyre-shadow);
+}
+
+/* About Section */
+
+.description {
+    padding: 50px 20px;
+    color: var(--base-white);
+    background-color: var(--web-background);
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+/* CONTACTS */
+
+.main__contacts {
+    padding: 2%;
+    margin: 3% auto;
+    background-color: var(--web-background);
+    text-align: center;
+    font-weight: bold;
+}
+
+.main__contacts h1 {
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--base-white);
+    text-align: center;
+}
+
+.main__contacts p {
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contact-form {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: var(--base-white);
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: var(--sky-gradient-1);
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--form-border);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: var(--base-white);
+    background-color: var(--sky-gradient-1);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact-form button:hover {
+    background-color: var(--sky-gradient-2);
+}

@@ -1,0 +1,46 @@
+/* GALLERY */
+/* Контейнер галереи */
+.gallery-container {
+    display: grid;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Элементы галереи */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Изображения */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+/* Эффект увеличения при наведении */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.main__karelia h1 {
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--base-white);
+    text-align: center;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

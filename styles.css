@@ -1,0 +1,247 @@
+:root {
+    /* Colors */
+    --sky-gradient-1: #001d3d;
+    --sky-gradient-2:#003566;
+    --base-white: #ffffff;
+    --header-background: rgba(0, 0, 0, 0.2);
+    --base-black: #000;
+    --tyre-color: rgba(0, 0, 0, 0.5);
+    --tyre-border:  #222;
+    --tyre-shadow: rgba(0, 0, 0, 0.7);
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-color: #333;
+    --modal-color: rgba(0, 0, 0, 0.8);
+    --form-border: #ccc;
+    --web-background: rgba(0, 0, 0, 0.3);
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+}
+
+a {
+    color: var(--base-white);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    z-index: 0;
+    color: var(--base-white);
+    background: linear-gradient(to bottom, var(--sky-gradient-1), var(--sky-gradient-2)); /* Синее небо */
+}
+
+/* Фон для <main> */
+main {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Контейнер для звезд */
+.stars {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+/* Оформление и анимация звезд */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 0;
+    background: var(--base-white);
+    animation: blink 2s infinite;
+}
+
+/* Анимация мигания */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Header and Navbar */
+.header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    padding: 20px;
+    background-color: var(--header-background);
+}
+
+.header__logo {
+    color: var(--base-white);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.header__logo img {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 77px;
+}
+
+.header__logo span {
+    padding-left: 75px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav-list {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.header__nav-list a {
+    color: var(--base-white);
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.toggle {
+    display: none;
+    border: none;
+    color: var(--base-white);
+    background: none;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+/* main Section */
+
+.main__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--base-white);
+    text-align: center;
+}
+
+.main__content h1 {
+    font-size: 3rem;
+}
+
+.main__content p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+.content {
+    margin: auto;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    margin-top: auto;
+    color: var(--base-white);
+    background-color: var(--base-black);
+    text-align: center;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 10px;
+}
+
+
+/* Стили для модального окна */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: none;
+    /* Скрыто по умолчанию */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-color);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Кнопка закрытия */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--base-white);
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .header__nav-list {
+        display: none;
+        flex-direction: column;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .header__nav.active .header__nav-list {
+        display: flex;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .wrapper {
+        width: 1240px;
+        margin: 0 auto;
+    }
+
+    .header__logo img { 
+    height: 68px;
+    }    
+}

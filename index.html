@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelAutoFamily - Исследуй свою страну</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main/mobile.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script defer src="scripts.js"></script>
+</head>
+<body class="page__main">
+    <header class="header">
+        <nav class="header__nav">
+            <a href="#" class="header__logo">
+                <img src="image/logo3.webp" alt="Travel Auto Family">
+                <span>Travel Auto Family</span>
+            </a>
+            <ul class="header__nav-list">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="posts/posts.html">Истории</a></li>
+                <li><a href="about/about.html">Обо мне</a></li>
+                <li><a href="web/web.html">Web-разработка</a></li>
+                <li><a href="gallery/gallery.html">Галерея</a></li>
+                <li><a href="contacts/contacts.html">Контакты</a></li>
+            </ul>
+            <button class="button toggle">&#9776;</button>
+        </nav>
+    </header>
+
+    <main class="main"> 
+    <section id="home" class="main__greeting main__content wrapper">
+        <div class="greeting">
+            <h1>Открой для себя удивительные места</h1>
+            <p>Ваше приключение начинается здесь. Исследуй мир вместе с нами!</p>
+            <a href="#destination" class="greeting__link">
+              <span class="text">Поехали!</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="destination" class="destination">
+        <h2>Любимые направления</h2>
+        <div class="destination__container">
+            <a class="destination__card" href="gallery/Spb.html">
+                <img src="image/SPb.jpg" alt="Санкт-Петербург">
+                <h3>Санкт Петербург и ЛО</h3>
+                <p>Особая атмосфера любимого города</p>
+            </a>
+            <a class="destination__card" href="gallery/Karelia.html">
+                <img src="image/Karelia.jpg" alt="Карелия">
+                <h3>Карелия</h3>
+                <p>Любимая многими</p>
+            </a>
+            <a class="destination__card" href="gallery/Murmansk.html">
+                <img src="image/Teriberka.jpg" alt="Мурманск">
+                <h3>Мурманская область</h3>
+                <p>Романтика заполярья</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="description" class="description">
+        <h2>Travel Auto Family</h2>
+        <p>Это ваш нестандартный путеводитель по России. Расскажу интересные истории и покажу новые места.</p>
+    </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <h2>Контакты</h2>
+        <a href="mailto:NetDomy@yandex.ru&cc=olga@bukhina.ru">Email: NetDomy@yandex.ru</a>
+        <p>Следите за мной социальных сетях:</p>
+        <div class="social-icons">
+            <a href="https://dzen.ru/taf?share_to=link"><img src="icons/dark-icon.png" alt="Дзен"></a>
+            <a href="https://github.com/Lelyia"><img src="icons/github-mark-white.png" alt="GitHub"></a>
+        </div>
+    </footer>
+</body>
+</html>
+

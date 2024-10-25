@@ -124,7 +124,7 @@ main {
     position: absolute;
     top:0;
     left: 0;
-    height: 77px;
+    height: 75px;
 }
 
 .header.active .header__logo img {

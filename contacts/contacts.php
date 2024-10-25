@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "portfolio";
+$dbname = "taf_my_site";
 
 // Подключение к базе данных
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -1,7 +1,6 @@
 .main__web {
     padding: 2%;
     margin: 3% auto;
-    background-color: var(--web-background);
     text-align: center;
     font-weight: bold;
 }

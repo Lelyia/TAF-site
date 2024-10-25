@@ -100,9 +100,24 @@ main {
 }
 
 .header__logo {
+    display: flex;
     color: var(--base-white);
-    font-size: 24px;
+    font-size: 18px;
     text-decoration: none;
+}
+
+.header.active .header__logo {
+    flex-direction: column;
+    margin-right: auto;
+    gap: 10px;
+}
+
+.header__logo br {
+    display: none;
+}
+
+.header.active .header__logo br {
+    display: block;
 }
 
 .header__logo img {
@@ -112,8 +127,17 @@ main {
     height: 77px;
 }
 
+.header.active .header__logo img {
+    position: relative;
+    width: 82px;
+}
+
 .header__logo span {
     padding-left: 75px;
+}
+
+.header.active .header__logo span {
+    padding-left: 0;
 }
 
 .header__nav {
@@ -128,9 +152,17 @@ main {
     gap: 15px;
 }
 
+.header__nav-list br {
+    display: none;
+}
+
+.header.active .header__nav-list br {
+    display: block;
+}
+
 .header__nav-list a {
     color: var(--base-white);
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -165,7 +197,7 @@ main {
 
 .content {
     margin: auto;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -178,9 +210,27 @@ main {
     text-align: center;
 }
 
-.social-icons img {
-    width: 30px;
+.footer h2 {
+    margin-bottom: 12px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px;
+    gap: 10px;
+}
+
+.social-icons a {
+    overflow: hidden;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.social-icons img {
+    align-self: center;
+    height: 35px;
 }
 
 
@@ -225,13 +275,26 @@ main {
         display: block;
     }
 
-    .header__nav.active .header__nav-list {
+    .header.active {
+        background-color: var(--base-black);
+    }
+
+    .header.active .header__nav {
+        align-items: flex-start;
+    }
+
+    .header.active .header__nav-list {
         display: flex;
     }
 
     .main h1 {
         font-size: 2rem;
     }
+}
+@media (min-width: 769px) {
+    .header__logo img {
+        height: 61px;
+}
 }
 
 
@@ -241,7 +304,21 @@ main {
         margin: 0 auto;
     }
 
+    .header__logo {
+        font-size: 24px;
+    }
+
     .header__logo img { 
     height: 68px;
-    }    
+    }   
+    
+    .header__nav-list a {
+        color: var(--base-white);
+        font-size: 22px;
+        text-decoration: none;
+    } 
+
+    .content {
+        font-size: 24px;
+    }
 }

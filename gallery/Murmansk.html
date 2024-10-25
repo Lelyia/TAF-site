@@ -1,31 +1,67 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelAutoFamily - Исследуй свою страну</title>
+    <title>Travel Auto Family - Исследуй свою страну</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="mobile.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script defer src="scripts.js"></script>
+    <script defer src="../scripts.js"></script>
 </head>
-<body>
+<body class="page__karelia">
     <header class="header">
-        <nav class="navbar">
-            <a href="#" class="logo">Travel Auto Family</a>
-            <ul class="nav-links">
+        <nav class="header__nav">
+            <a href="../index.html" class="header__logo">
+                <img src="../image/logo3.webp" alt="Travel Auto Family">
+                <span>Travel<br> Auto<br> Family</span>
+            </a>
+            <ul class="header__nav-list">
                 <li><a href="../index.html">Главная</a></li>
-                <li><a href="posts/posts.html">Истории</a></li>
-                <li><a href="about/about.html">Обо мне</a></li>
-                <li><a href="web/web.html">Web-разработка</a></li>
-                <li><a href="contacts/contacts.html">Контакты</a></li>
+                <li><a href="../posts/posts.html">Блог</a></li>
+                <li><a href="../about/about.html">Обо мне</a></li>
+                <li><a href="../web/web.html">Разработка<br> сайтов</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="../contacts/contacts.html">Контакты</a></li>
             </ul>
-            <button class="menu-toggle">&#9776;</button>
+            <button class="toggle">&#9776;</button>
         </nav>
     </header>
 
-    <main>
-
+    <main class="main">
+        <section class="main__karelia wrapper">
+            <h1>Карелия</h1>
+        </section>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="../image/Murmansk/1.jpg"alt="Мурманск 1">
+            </div>
+            <div class="gallery-item">
+                <img src="../image/Murmansk/2.jpg"alt="Мурманск 2">
+            </div>
+            <div class="gallery-item">
+                <img src="../image/Murmansk/3.jpg"alt="Мурманск 3">
+            </div>
+            <div class="gallery-item">
+                <img src="../image/Murmansk/4.jpg"alt="Мурманск 4">
+            </div>
+            <div class="gallery-item">
+                <img src="../image/Murmansk/5.jpg"alt="Мурманск 5">
+            </div>
+            <div class="gallery-item">
+                <img src="../image/Murmansk/6.jpg"alt="Мурманск 6">
+            </div>
+            <div class="gallery-item">
+                <img src="../image/Murmansk/7.jpg"alt="Мурманск 7">
+            </div>
+            <div class="gallery-item">
+                <img src="../image/Murmansk/8.jpg"alt="Мурманск 8">
+            </div>
+            </div>
+            
+        </div>
+    
     </main>
 
     <footer id="contact" class="footer">
@@ -33,10 +69,14 @@
         <p>Email: NetDomy@yandex.ru</p>
         <p>Следите за мной социальных сетях:</p>
         <div class="social-icons">
-            <a href="https://dzen.ru/taf?share_to=link"><img src="icons/dark-icon.png" alt="Дзен"></a>
-            <a href="https://github.com/Lelyia"><img src="icons/github-mark-white.png" alt="GitHub"></a>
+            <a href="https://dzen.ru/taf?share_to=link"><img src="../icons/dark-icon.png" alt="Дзен"></a>
+            <a href="https://github.com/Lelyia"><img src="../icons/github-mark-white.png" alt="GitHub"></a>
         </div>
     </footer>
+    <div class="modal" id="modal">
+        <span class="close" id="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
 </body>
 </html>
 

@@ -3,7 +3,6 @@
 .main__contacts {
     padding: 2%;
     margin: 3% auto;
-    background-color: var(--web-background);
     text-align: center;
     font-weight: bold;
 }
@@ -20,13 +19,18 @@
     margin-bottom: 10px;
     text-align: center;
 }
+
 .contact-form {
     max-width: 600px;
     padding: 20px;
-    margin: 0 auto;
+    margin: auto;
     border-radius: 8px;
     background-color: var(--base-white);
     box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.contact-form form {
+    margin: 16px;
 }
 
 .contact-form h2 {

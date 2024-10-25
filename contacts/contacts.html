@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelAutoFamily - Исследуй свою страну</title>
+    <title>Travel Auto Family - Исследуй свою страну</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="mobile.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -15,12 +15,15 @@
 <body class="page__contacts">
     <header class="header">
         <nav class="header__nav">
-            <a href="#" class="header__logo">Travel Auto Family</a>
+            <a href="../index.html" class="header__logo">
+                <img src="../image/logo3.webp" alt="Travel Auto Family">
+                <span>Travel<br> Auto<br> Family</span>
+            </a>
             <ul class="header__nav-list">
                 <li><a href="../index.html">Главная</a></li>
-                <li><a href="../posts/posts.html">Истории</a></li>
+                <li><a href="../posts/posts.html">Блог</a></li>
                 <li><a href="../about/about.html">Обо мне</a></li>
-                <li><a href="web/web.html">Web-разработка</a></li>
+                <li><a href="web/web.html">Разработка<br> сайтов</a></li>
                 <li><a href="../gallery/gallery.html">Галерея</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
@@ -36,14 +39,14 @@
         </section>
         <section class="contact-form">
             <h2>Оставить заявку на сотрудничество</h2>
-            <form action="send_message.php" method="POST" id="contactForm" target="_blank">
-                <label for="name">Имя:</label>
+            <form action="contacts.php" method="POST" id="contactForm" target="_blank">
+                <label class="visually-hidden" for="name">Имя:</label>
                 <input type="text" id="name" name="name" placeholder="Введите имя" />
 
-                <label for="email">Email:</label>
+                <label class="visually-hidden" for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Введите e-mail" required />
 
-                <label for="message">Сообщение:</label>
+                <label class="visually-hidden" for="message">Сообщение:</label>
                 <textarea id="message" name="message" placeholder="Введите текст"></textarea>
 
                 <button type="submit">Отправить</button>

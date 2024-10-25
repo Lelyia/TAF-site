@@ -1,14 +1,5 @@
-.page__about {
-    background-image: url(/image/KARELIA/1.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-}
-
 .main__about {
-    width: 45%;
     padding: 2%;
-    margin: 1% auto auto 10%;
-    background-color: var(--tyre-shadow);
     text-align: center;
     font-weight: bold;
 }
@@ -23,4 +14,9 @@
     padding: 10px;
     margin-bottom: 10px;
     text-indent: 5%;
+}
+
+.about img {
+    width: 100%;
+    margin-top: 20px;
 }

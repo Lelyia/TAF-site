@@ -2,7 +2,7 @@
 
 .main__contacts {
     padding: 2%;
-    margin: 3% auto;
+    margin: 3% 16px;
     text-align: center;
     font-weight: bold;
 }
@@ -30,7 +30,7 @@
 }
 
 .contact-form form {
-    margin: 16px;
+    margin: auto;
 }
 
 .contact-form h2 {

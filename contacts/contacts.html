@@ -34,23 +34,25 @@
     <main>
         <section class="main__contacts wrapper">
             <h1>Свяжитесь со мной!</h1>
-            <p>Если у вас есть предложение о сотрудничестве, вопросы или просто желание пообщаться, не стесняйтесь  писать!</p>
+            <p>Если у вас есть предложение о сотрудничестве, вопросы или просто желание пообщаться, не стесняйтесь
+                писать!</p>
             <p>Буду рада Вам!</p>
-        </section>
-        <section class="contact-form">
-            <h2>Оставить заявку на сотрудничество</h2>
-            <form action="contacts.php" method="POST" id="contactForm" target="_blank">
-                <label class="visually-hidden" for="name">Имя:</label>
-                <input type="text" id="name" name="name" placeholder="Введите имя" />
 
-                <label class="visually-hidden" for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Введите e-mail" required />
+            <div class="contact-form">
+                <h2>Оставить заявку на сотрудничество</h2>
+                <form action="contacts.php" method="POST" id="contactForm" target="_blank">
+                    <label class="visually-hidden" for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите имя" />
 
-                <label class="visually-hidden" for="message">Сообщение:</label>
-                <textarea id="message" name="message" placeholder="Введите текст"></textarea>
+                    <label class="visually-hidden" for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Введите e-mail" required />
 
-                <button type="submit">Отправить</button>
-            </form>
+                    <label class="visually-hidden" for="message">Сообщение:</label>
+                    <textarea id="message" name="message" placeholder="Введите текст"></textarea>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
         </section>
 
     </main>

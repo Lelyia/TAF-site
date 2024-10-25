@@ -22,6 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Функция изменения фона при скролле
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.style.backgroundColor = '#001d3d'; // Тёмный фон
+    } else {
+      header.style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; // Прозрачный фон
+    }
+  });
+});
+
 // Получаем элементы модального окна и изображение
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");

@@ -99,6 +99,10 @@ main {
     background-color: var(--header-background);
 }
 
+.header--scrolling {
+    background-color: var(--sky-gradient-1);
+}
+
 .header__logo {
     display: flex;
     color: var(--base-white);

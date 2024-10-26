@@ -93,6 +93,7 @@ main {
 /* Header and Navbar */
 .header {
     position: sticky;
+    position: relative;
     z-index: 1000;
     top: 0;
     padding: 20px;
@@ -127,8 +128,9 @@ main {
 .header__logo img {
     position: absolute;
     top:0;
+    bottom: 0;
     left: 0;
-    height: 75px;
+    max-height: 100%;
 }
 
 .header.active .header__logo img {

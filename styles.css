@@ -328,24 +328,16 @@ main {
         font-size: 24px;
     }
 
-    .header__nav-list {
-        gap: 20px;
-    }
-
-    .web-link br {
-        display: none;
-    }
-
+    .header__logo img { 
+    height: 68px;
+    }   
+    
     .header__nav-list a {
         color: var(--base-white);
         white-space: nowrap;
         font-size: 22px;
         text-decoration: none;
-    }
-
-    .web-link span {
-        display: inline;
-    }
+    } 
 
     .content {
         font-size: 24px;

@@ -329,21 +329,22 @@ main {
     }
 
     .header__nav-list {
-        gap: 15px;
+        gap: 20px;
     }
 
-    .header__nav-list br {
+    .web-link br {
         display: none;
     }
 
     .header__nav-list a {
         color: var(--base-white);
+        white-space: nowrap;
         font-size: 22px;
         text-decoration: none;
     }
 
     .web-link span {
-        display: block;
+        display: inline;
     }
 
     .content {

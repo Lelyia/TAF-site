@@ -22,6 +22,7 @@
         main {
             width: 100vh;
             display: block;
+            margin: auto;
         }
 
         .container {

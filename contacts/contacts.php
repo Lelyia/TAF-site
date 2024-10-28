@@ -1,31 +1,43 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "taf_my_site";
+// Включаем файл для подключения к базе данных
+require_once 'db.php';
 
-// Подключение к базе данных
-$conn = new mysqli($servername, $username, $password, $dbname);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Получаем данные из формы и удаляем лишние пробелы
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $message = trim($_POST['message']);
 
+    // Проверяем, что все поля заполнены
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        // Валидация email
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            try {
+                // Подготовим SQL-запрос для вставки данных
+                $sql = "INSERT INTO contacts (name, email, message) VALUES (:name, :email, :message)";
+                $stmt = $pdo->prepare($sql);
+                // Привязываем значения
+                $stmt->bindParam(':name', $name);
+                $stmt->bindParam(':email', $email);
+                $stmt->bindParam(':message', $message);
 
-// Проверка подключения
-if ($conn->connect_error) {
-    die("Ошибка подключения: " . $conn->connect_error);
-}
+                // Выполняем запрос
+                $stmt->execute();
 
-// Получение данных из формы
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-
-// SQL-запрос для вставки данных в таблицу
-$sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Заявка успешно отправлена!";
+                // Перенаправляем пользователя на страницу с сообщением об успешной отправке
+                header("Location: success.php");
+                exit();
+            } catch (PDOException $e) {
+                // В случае ошибки выводим сообщение
+                echo "Ошибка при записи в базу данных: " . $e->getMessage();
+            }
+        } else {
+            echo "Неверный формат email!";
+        }
+    } else {
+        echo "Пожалуйста, заполните все поля!";
+    }
 } else {
-    echo "Ошибка: " . $sql . "<br>" . $conn->error;
+    echo "Форма не отправлена!";
 }
 
-// Закрытие соединения
-$conn->close();
